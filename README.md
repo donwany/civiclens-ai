@@ -298,6 +298,8 @@ Run RAGAS evaluation to measure system quality:
 
 ```bash
 python -m app.eval_ragas
+
+python evaluation/eval_rag_quality.py -d sample_dataset.json
 ```
 
 This evaluates:
