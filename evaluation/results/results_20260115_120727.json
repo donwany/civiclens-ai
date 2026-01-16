@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-01-15T12:07:27.126798",
+  "total_tests": 6,
+  "elapsed_time_seconds": 60.25,
+  "benchmark_stats": {
+    "total_tests": 6,
+    "successful_tests": 6,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "average_metrics": {
+      "faithfulness": 1.0,
+      "answer_relevance": 0.9358,
+      "context_recall": 1.0,
+      "context_precision": 1.0,
+      "ragas_score": 0.9839
+    },
+    "min_ragas_score": 0.9788,
+    "max_ragas_score": 0.991
+  },
+  "results": [
+    {
+      "test_number": 1,
+      "question": "How does LightRAG solve the hallucination problem in large language models?",
+      "answer": "LightRAG solves the hallucination problem by combining large language models with external knowledge retrieval. The framework ensures accurate responses by grounding LLM outputs in actual documents. L...",
+      "ground_truth": "LightRAG solves the hallucination problem by combining large language models with external knowledge retrieval. The framework ensures accurate responses by grounding LLM outputs in actual documents. L...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9452292090878197,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:06:41.053430",
+      "ragas_score": 0.9863
+    },
+    {
+      "test_number": 2,
+      "question": "What are the three main components required in a RAG system?",
+      "answer": "A RAG system requires three main components: a retrieval system (vector database or search engine) to find relevant documents, an embedding model to convert text into vector representations for simila...",
+      "ground_truth": "A RAG system requires three main components: a retrieval system (vector database or search engine) to find relevant documents, an embedding model to convert text into vector representations for simila...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9153677624931031,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:06:40.951256",
+      "ragas_score": 0.9788
+    },
+    {
+      "test_number": 3,
+      "question": "How does LightRAG's retrieval performance compare to traditional RAG approaches?",
+      "answer": "LightRAG delivers faster retrieval performance than traditional RAG approaches. The framework optimizes document retrieval operations for speed. Traditional RAG systems often suffer from slow query re...",
+      "ground_truth": "LightRAG delivers faster retrieval performance than traditional RAG approaches. The framework optimizes document retrieval operations for speed. Traditional RAG systems often suffer from slow query re...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9233736729873921,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:07:01.588249",
+      "ragas_score": 0.9808
+    },
+    {
+      "test_number": 4,
+      "question": "What vector databases does LightRAG support and what are their key characteristics?",
+      "answer": "LightRAG supports multiple vector databases including ChromaDB for simple deployment and efficient similarity search, Neo4j for graph-based knowledge representation with vector capabilities, Milvus fo...",
+      "ground_truth": "LightRAG supports multiple vector databases including ChromaDB for simple deployment and efficient similarity search, Neo4j for graph-based knowledge representation with vector capabilities, Milvus fo...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9640524952946894,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:07:01.489514",
+      "ragas_score": 0.991
+    },
+    {
+      "test_number": 5,
+      "question": "What are the four key metrics for evaluating RAG system quality and what does each metric measure?",
+      "answer": "RAG system quality is measured through four key metrics: Faithfulness measures whether answers are factually grounded in retrieved context and detects hallucinations. Answer Relevance measures how wel...",
+      "ground_truth": "RAG system quality is measured through four key metrics: Faithfulness measures whether answers are factually grounded in retrieved context and detects hallucinations. Answer Relevance measures how wel...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9160066057577559,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:07:27.126676",
+      "ragas_score": 0.979
+    },
+    {
+      "test_number": 6,
+      "question": "What are the core benefits of LightRAG and how does it improve upon traditional RAG systems?",
+      "answer": "LightRAG offers five core benefits: accuracy through document-grounded responses, up-to-date information without model retraining, domain expertise through specialized document collections, cost-effec...",
+      "ground_truth": "LightRAG offers five core benefits: accuracy through document-grounded responses, up-to-date information without model retraining, domain expertise through specialized document collections, cost-effec...",
+      "project": "lightrag_evaluation_sample",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 0.9505619391507878,
+        "context_recall": 1.0,
+        "context_precision": 0.9999999999
+      },
+      "timestamp": "2026-01-15T12:07:27.030271",
+      "ragas_score": 0.9876
+    }
+  ]
+}

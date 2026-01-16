@@ -1,0 +1,94 @@
+# Policy & Executive Action Questions
+
+- What is the mission of the President’s Council of Advisors on Science and Technology?
+- Why restore the Department of War?
+- Why should men be excluded from women’s sports?
+- What are the objectives of strengthening efforts to protect U.S. nationals from wrongful detention abroad?
+- What actions are required to end radical indoctrination in K–12 schooling?
+- How can educational freedom and opportunity for families be expanded?
+- How can parents and communities be empowered to improve education outcomes?
+- Why criminalize burning the American flag?
+- How can barriers to AI leadership be removed?
+- What does preventing “woke AI” in the federal government entail?
+- How can the export of the American AI technology stack be promoted globally?
+- What role does AI play in curing pediatric cancer?
+- How can the integrity of American elections be preserved?
+- How can the meaning and value of American citizenship be protected?
+- How can the safety and security of biological research be improved?
+- What is the role of the President’s Make America Beautiful Again Commission?
+- How should artificial intelligence education be advanced for American youth?
+- What strategies best prepare Americans for high-paying skilled trade jobs of the future?
+- How can equality of opportunity and meritocracy be restored?
+- What measures ensure transparency regarding foreign influence at American universities?
+- How does the White House Initiative promote excellence and innovation at HBCUs?
+- What is the purpose of establishing the United States Investment Accelerator?
+- How do Section 232 actions strengthen national security and economic resilience in critical minerals?
+- What policies are most effective at ending crime and disorder on America’s streets?
+- Why is the revocation of Syria sanctions being considered?
+- How can national parks be improved under the Make America Beautiful Again initiative?
+- Why was the executive order on competition revoked?
+- What is the mission of the White House Task Force on the 2028 Summer Olympics?
+- How do amended duties address the flow of illicit drugs across the northern border?
+- Why are reciprocal tariff rates being further modified?
+- What is the significance of reestablishing the Presidential Fitness Test?
+- How can competition be enabled in the commercial space industry?
+- What does putting America first in international environmental agreements mean?
+- Why is restoring the death penalty viewed as a public safety measure?
+- What strategies are essential to securing U.S. borders?
+- How should the military’s role in protecting territorial integrity be clarified?
+- How does federal policy restore biological truth and protect women?
+- How does ending illegal discrimination restore merit-based opportunity?
+- Why were certain executive orders revoked?
+- How can freedom of speech be restored while ending federal censorship?
+- Why should radical and wasteful DEI programs be eliminated?
+- How can Alaska’s resource potential be responsibly unleashed?
+- What conditions justify declaring a national energy emergency?
+- Why is extending reciprocal tariff modification necessary?
+- What is the rationale for extending the TikTok enforcement delay?
+- How can access to in vitro fertilization be expanded?
+- What constitutes anti-Christian bias and how can it be eradicated?
+- Why impose sanctions on the International Criminal Court?
+- How do tariffs address the synthetic opioid supply chain from China?
+- What is the strategic purpose of a U.S. sovereign wealth fund?
+- What progress has been made at the southern border?
+- Why eliminate procurement mandates for paper straws?
+- What is the role of the National Energy Dominance Council?
+- How can state and local preparedness improve national efficiency?
+- Why impose tariffs on countries importing Venezuelan oil?
+- What risks prompted remedial action involving Paul Weiss?
+- How does procurement consolidation save taxpayer dollars?
+- How does eliminating information silos reduce waste, fraud, and abuse?
+- Why designate English as the official language of the United States?
+- What risks are associated with Perkins Coie LLP?
+- Why restore public service loan forgiveness?
+- How should the federal bureaucracy be reduced?
+- Why end taxpayer subsidization of open borders?
+- Why is Jocelyn Nungaray being honored?
+- What risks are associated with Jenner & Block?
+- How can payments to and from America’s bank accounts be modernized?
+- How does commonsense wildfire prevention protect communities?
+- Why regulate water pressure in showerheads?
+- How can defense acquisition be modernized to spur innovation?
+- What barriers limit competition in U.S. markets?
+- How can foreign defense sales be made faster and more accountable?
+- What does the U.S.–UK Economic Prosperity Deal achieve?
+- Why invest in advanced nuclear reactor technologies?
+- How can gold standard science be restored?
+- What does restoring American airspace sovereignty involve?
+- How do trucking regulations improve road safety?
+- How can law enforcement be strengthened without overcriminalization?
+- Why reform cashless bail policies?
+- Why realign the refugee admissions program?
+- What actions address national security risks from imports of copper?
+- How does federal hiring accountability improve governance?
+- How does the Genesis Mission support America’s future?
+- Why combat price fixing in the food supply chain?
+- Why designate certain extremist groups as foreign terrorist organizations?
+- Why designate fentanyl as a weapon of mass destruction?
+- How does reciprocal tariff policy correct trade imbalances?
+- How can domestic production of critical medicines be increased?
+- What benefits come from most-favored-nation drug pricing?
+- How can federal procurement return to commonsense principles?
+- How can accreditation reform strengthen higher education?
+- How does the Iron Dome for America enhance national defense?
+- How should trade and security agreements be implemented fairly?

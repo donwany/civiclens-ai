@@ -1,0 +1,7 @@
+test_number,question,project,faithfulness,answer_relevance,context_recall,context_precision,ragas_score,status,timestamp
+1,How does LightRAG solve the hallucination problem in large language models?,lightrag_evaluation_sample,1.0000,0.9452,1.0000,1.0000,0.9863,success,2026-01-15T12:01:28.639226
+2,What are the three main components required in a RAG system?,lightrag_evaluation_sample,1.0000,0.9155,1.0000,1.0000,0.9789,success,2026-01-15T12:01:16.470775
+3,How does LightRAG's retrieval performance compare to traditional RAG approaches?,lightrag_evaluation_sample,1.0000,0.9233,1.0000,1.0000,0.9808,success,2026-01-15T12:01:28.535421
+4,What vector databases does LightRAG support and what are their key characteristics?,lightrag_evaluation_sample,1.0000,0.9641,1.0000,1.0000,0.9910,success,2026-01-15T12:02:07.987111
+5,What are the four key metrics for evaluating RAG system quality and what does each metric measure?,lightrag_evaluation_sample,1.0000,0.9161,1.0000,1.0000,0.9790,success,2026-01-15T12:01:45.006611
+6,What are the core benefits of LightRAG and how does it improve upon traditional RAG systems?,lightrag_evaluation_sample,1.0000,0.9505,1.0000,1.0000,0.9876,success,2026-01-15T12:02:07.882180

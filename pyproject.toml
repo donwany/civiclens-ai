@@ -1,0 +1,28 @@
+[project]
+name = "rag-from-carfax"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chainlit>=2.9.2",
+    "langchain-openai<0.3",
+    "langchain<0.3",
+    "markdown>=3.10",
+    "pandas>=2.3.3",
+    "psycopg[binary,pool]>=3.2.13",
+    "pymupdf>=1.26.6",
+    "pytesseract>=0.3.13",
+    "python-dotenv>=1.2.1",
+    "tiktoken>=0.12.0",
+    "unstructured[docx,image,pdf]>=0.18.20",
+    "langchain-community<0.3",
+    "langchain-text-splitters<0.3",
+    "langchain-postgres>=0.0.16",
+    "redis>=5.0.0,<5.2.0",
+    "langchain-redis>=0.0.4",
+    "cohere>=5.20.0",
+    "langchain-cohere>=0.2.4",
+    "ragas>=0.3.9",
+    "loguru>=0.7.3",
+]

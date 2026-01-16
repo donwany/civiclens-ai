@@ -1,0 +1,26 @@
+/* Hide README button with high specificity */
+button#readme-button,
+button[id="readme-button"],
+.MuiButtonBase-root#readme-button,
+[id="readme-button"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide parent container if needed */
+button#readme-button[aria-haspopup="dialog"] {
+    display: none !important;
+}
+
+/* Additional specific targeting */
+button.MuiButtonBase-root.MuiButton-root[id="readme-button"] {
+    display: none !important;
+}
+
+/* Hide by content - may not work in all browsers */
+button[aria-label*="Readme"],
+button[title*="Readme"] {
+    display: none !important;
+}

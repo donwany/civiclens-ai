@@ -1,0 +1,35 @@
+# Core
+chainlit
+python-dotenv
+pandas
+tiktoken
+
+# DB / pool
+psycopg[binary,pool]
+
+# Ingestion helpers
+unstructured
+unstructured[pdf]
+unstructured[docx]
+unstructured[image]
+markdown
+pytesseract
+pymupdf
+
+#Langchain
+langchain<0.3
+langchain-openai<0.3
+langchain-community<0.3
+langchain-text-splitters<0.3
+langchain-postgres
+
+#Caching
+redis>=5.0.0,<5.2.0
+langchain-redis
+
+#Re-Ranking
+cohere
+langchain-cohere
+
+#Evals
+ragas
