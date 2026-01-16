@@ -210,7 +210,11 @@ Wait for the ingestion to complete. You'll see statistics about documents and ch
 Simply type your questions in the chat:
 
 ```
-What are the objectives of strengthening efforts to protect U.S. nationals from wrongful detention abroad?
+Why restore the Department of War?
+
+Why should men be excluded from women’s sports?
+
+hy criminalize burning the American flag?
 ```
 
 The system will:
