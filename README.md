@@ -210,7 +210,7 @@ Wait for the ingestion to complete. You'll see statistics about documents and ch
 Simply type your questions in the chat:
 
 ```
-What is the company's vacation policy?
+What are the objectives of strengthening efforts to protect U.S. nationals from wrongful detention abroad?
 ```
 
 The system will:
@@ -259,7 +259,7 @@ REDIS_URL=redis://localhost:6379
 ### 4. Run the Application
 
 ```bash
-chainlit run app/chainlit_app.py --host 0.0.0.0 --port 8000
+chainlit run app/chainlit_app.py --host 0.0.0.0 --port 1776
 ```
 
 ## Configuration
