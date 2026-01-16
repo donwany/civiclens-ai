@@ -320,7 +320,7 @@ company-knowledge-assistant-v2/
 │   ├── constants.py         # Configuration constants
 │   └── eval_ragas.py        # RAGAS evaluation
 ├── data/                    # Document storage
-├── seed/                    # Test data for evaluation
+├── evaluation/              # Test data for evaluation
 ├── .chainlit/
 │   └── config.toml          # Chainlit UI configuration
 ├── docker-compose.yml       # Docker services
