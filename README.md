@@ -136,8 +136,8 @@ python download_executive_orders_pdf_files.py
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
-cd civic-lens-ai
+git clone https://github.com/donwany/civiclens-ai.git
+cd civiclens-ai
 ```
 
 ### 2. Configure Environment Variables
