@@ -311,7 +311,7 @@ This evaluates:
 ## Project Structure
 
 ```
-company-knowledge-assistant-v2/
+civiclens-ai/
 ├── app/
 │   ├── chainlit_app.py      # Main Chainlit application
 │   ├── rag.py               # RAG system implementation
