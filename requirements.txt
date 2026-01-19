@@ -3,7 +3,7 @@ chainlit
 python-dotenv
 pandas
 tiktoken
-
+boto3
 # DB / pool
 psycopg[binary,pool]
 

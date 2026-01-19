@@ -6,7 +6,11 @@ Supports PDF, DOCX, Markdown, and TXT files.
 
 """
 
-from __future__ import annotations
+
+import tempfile
+from typing import Tuple
+import boto3
+
 import os, glob, uuid, asyncio, traceback
 from typing import Iterable, List, Dict, Any
 from pathlib import Path
@@ -63,7 +67,70 @@ def _load_docs(base: str = DATA_DIR) -> tuple[List[Document], List[str]]:
             traceback.print_exc()
 
     return docs, file_paths
-        
+
+
+# # Environment variables
+# S3_BUCKET = os.getenv("S3_BUCKET")
+# S3_PREFIX = os.getenv("S3_PREFIX", "")  # optional folder path in bucket
+
+# # AWS variables (boto3 picks these up automatically)
+# AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+# AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION")
+
+# s3 = boto3.client("s3")
+
+# def _load_docs_from_s3(
+#     bucket: str = S3_BUCKET,
+#     prefix: str = S3_PREFIX,
+# ) -> Tuple[List[Document], List[str]]:
+#     """Load documents from an S3 bucket and return documents with S3 paths."""
+    
+#     docs: List[Document] = []
+#     file_paths: List[str] = []
+
+#     paginator = s3.get_paginator("list_objects_v2")
+
+#     for page in paginator.paginate(Bucket=bucket, Prefix=prefix):
+#         for obj in page.get("Contents", []):
+#             key = obj["Key"]
+
+#             # Skip directories and hidden files
+#             if key.endswith("/") or os.path.basename(key).startswith("."):
+#                 continue
+
+#             ext = os.path.splitext(key)[1].lower()
+
+#             try:
+#                 with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
+#                     s3.download_fileobj(bucket, key, tmp)
+#                     tmp_path = tmp.name
+
+#                 # Load based on file extension
+#                 if ext == ".md":
+#                     docs.extend(UnstructuredMarkdownLoader(tmp_path).load())
+#                 elif ext == ".pdf":
+#                     docs.extend(PyMuPDFLoader(tmp_path).load())
+#                 elif ext == ".docx":
+#                     docs.extend(UnstructuredWordDocumentLoader(tmp_path).load())
+#                 elif ext == ".txt":
+#                     docs.extend(TextLoader(tmp_path).load())
+#                 else:
+#                     continue
+
+#                 file_paths.append(f"s3://{bucket}/{key}")
+
+#             except Exception:
+#                 print(f"INGEST ERROR: failed to load s3://{bucket}/{key}")
+#                 traceback.print_exc()
+
+#             finally:
+#                 if os.path.exists(tmp_path):
+#                     os.remove(tmp_path)
+
+#     return docs, file_paths
+
+
 
 def _chunk(docs: List[Document]) -> List[Document]:
     """Split documents into smaller chunks for embedding."""

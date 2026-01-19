@@ -94,10 +94,12 @@ async def start():
     # Suggested questions for the UI
     suggested_questions = [
         "What is the mission of the President’s Council of Advisors on Science and Technology?",
-        "Why restore the Department of War?",
+        "Why should the United States Department of War be restored?",
         "Why should men be excluded from women’s sports?",
+        "What are the objectives of Strengthening American Leadership in Digital Financial Technology?",
+        "What is the Plan for Establishing a United States Sovereign Wealth Fund?",
         "What are the objectives of strengthening efforts to protect U.S. nationals from wrongful detention abroad?",
-        "What actions are required to end radical indoctrination in K–12 schooling?",
+        "Why should Common sense School Discipline Policies be reinstated and radical indoctrination in K–12 schooling?",
         "How can educational freedom and opportunity for families be expanded?",
         "How can parents and communities be empowered to improve education outcomes?",
         "Why criminalize burning the American flag?",
@@ -115,62 +117,80 @@ async def start():
     # Send welcome message with guidance
     await cl.Message(
         content=(
-            "Welcome! to 🇺🇸 CivicLens AI \n Advancing AI Education, Civic Literacy, and Responsible Governance for America’s Future  \n"
-            "Type `/ingest` to load documents or start asking questions if documents are already loaded.\n\n"
-            "You can also explore questions such as:\n"
+            "Welcome! to 🇺🇸 CivicLens AI \n `Advancing AI Education, Civic Literacy, and Responsible Governance for America’s Future`  \n"
+            "Type `/ingest` to load documents or start asking questions if documents are already loaded.\n\n, "
+            "`/status` to check the status of document ingestion.\n\n "
+            "`/help` to see available commands.\n\n"
+            "You can also explore `suggested_questions` such as:\n"
             + "\n".join([f"- {q}" for q in suggested_questions])
         )
     ).send()
-
 
 
 @cl.on_message
 async def main(message: cl.Message):
     """
     Process incoming user messages.
-    
-    Routes commands to command handler or processes questions through RAG system.
-    Displays answers with sources and context.
+    Displays answers, PDF sources, and retrieved context.
     """
     content = message.content.strip()
-    
-    # Route commands to dedicated handler
+
     if content.startswith("/"):
         await handle_command(content)
         return
-    
-    # Validate non-empty input
+
     if not content:
-        await cl.Message(content="Please ask a question or use a command like `/ingest` or `/status`.").send()
+        await cl.Message(
+            content="Please ask a question or use a command like `/ingest` or `/status`."
+        ).send()
         return
-    
-    # Initialize response message
+
     msg = cl.Message(content="")
     await msg.send()
-    
+
     start_time = time.perf_counter()
-    
+
     try:
-        # Query RAG system for answer
         answer, sources, contexts = await answer_with_docs_async(content)
-        
         elapsed = time.perf_counter() - start_time
-        
-        # Display main answer
+
+        # ---------------------------
+        # Main Answer
+        # ---------------------------
         msg.content = answer
         await msg.update()
-        
-        # Append source documents if enabled
+
+        elements = []
+
+        # ---------------------------
+        # PDF Sources (Inline Preview)
+        # ---------------------------
         show_sources = cl.user_session.get("show_sources", True)
         if show_sources and sources:
-            sources_text = "\n\n**Sources:**\n" + "\n".join([f"- `{src}`" for src in sources])
-            msg.content += sources_text
-            await msg.update()
-        
-        # Attach context snippets as side panel elements
+            for src in sources:
+                if src.lower().endswith(".pdf"):
+                    elements.append(
+                        cl.File(
+                            name=os.path.basename(src),
+                            path=src,
+                            display="inline"  # 👈 embedded PDF preview
+                        )
+                    )
+                else:
+                    # Fallback for non-PDF sources
+                    elements.append(
+                        cl.Text(
+                            name="Source",
+                            content=src,
+                            display="side"
+                        )
+                    )
+
+        # ---------------------------
+        # Retrieved Context (Side Panel)
+        # ---------------------------
         if contexts:
-            elements = []
-            for idx, ctx in enumerate(contexts[:5], 1):  # Display top 5 contexts
+            for idx, ctx in enumerate(contexts[:5], 1):
                 elements.append(
                     cl.Text(
                         name=f"Context {idx}",
@@ -178,24 +198,104 @@ async def main(message: cl.Message):
                         display="side"
                     )
                 )
+
+        if elements:
             msg.elements = elements
             await msg.update()
-        
-        # Display performance metrics
+
+        # ---------------------------
+        # Performance Metrics
+        # ---------------------------
         await cl.Message(
             content=f"_⏱️ Response time: {elapsed:.2f}s_",
             author="System"
         ).send()
-        
+
     except Exception as e:
-        # Log error details for debugging
-        print(f"Error in main: {str(e)}")
         import traceback
         traceback.print_exc()
-        
-        # Display user-friendly error message
-        msg.content = f"❌ Error: {str(e)}\n\nI encountered an error processing your question. Please try again or check the logs."
+
+        msg.content = (
+            f"❌ Error: {str(e)}\n\n"
+            "I encountered an error processing your question. Please try again."
+        )
         await msg.update()
+
+
+
+
+# @cl.on_message
+# async def main(message: cl.Message):
+#     """
+#     Process incoming user messages.
+    
+#     Routes commands to command handler or processes questions through RAG system.
+#     Displays answers with sources and context.
+#     """
+#     content = message.content.strip()
+    
+#     # Route commands to dedicated handler
+#     if content.startswith("/"):
+#         await handle_command(content)
+#         return
+    
+#     # Validate non-empty input
+#     if not content:
+#         await cl.Message(content="Please ask a question or use a command like `/ingest` or `/status`.").send()
+#         return
+    
+#     # Initialize response message
+#     msg = cl.Message(content="")
+#     await msg.send()
+    
+#     start_time = time.perf_counter()
+    
+#     try:
+#         # Query RAG system for answer
+#         answer, sources, contexts = await answer_with_docs_async(content)
+        
+#         elapsed = time.perf_counter() - start_time
+        
+#         # Display main answer
+#         msg.content = answer
+#         await msg.update()
+        
+#         # Append source documents if enabled
+#         show_sources = cl.user_session.get("show_sources", True)
+#         if show_sources and sources:
+#             sources_text = "\n\n**Sources:**\n" + "\n".join([f"- `{src}`" for src in sources])
+#             msg.content += sources_text
+#             await msg.update()
+        
+#         # Attach context snippets as side panel elements
+#         if contexts:
+#             elements = []
+#             for idx, ctx in enumerate(contexts[:5], 1):  # Display top 5 contexts
+#                 elements.append(
+#                     cl.Text(
+#                         name=f"Context {idx}",
+#                         content=ctx,
+#                         display="side"
+#                     )
+#                 )
+#             msg.elements = elements
+#             await msg.update()
+        
+#         # Display performance metrics
+#         await cl.Message(
+#             content=f"_⏱️ Response time: {elapsed:.2f}s_",
+#             author="System"
+#         ).send()
+        
+#     except Exception as e:
+#         # Log error details for debugging
+#         print(f"Error in main: {str(e)}")
+#         import traceback
+#         traceback.print_exc()
+        
+#         # Display user-friendly error message
+#         msg.content = f"❌ Error: {str(e)}\n\nI encountered an error processing your question. Please try again or check the logs."
+#         await msg.update()
 
 
 async def handle_command(command: str):
@@ -312,3 +412,21 @@ async def setup_settings(settings):
         settings (dict): Updated settings from UI
     """
     cl.user_session.set("show_sources", settings.get("show_sources", True))
+
+
+
+
+# @cl.on_chat_start
+# async def start():
+#     pdf_path = "data/executive_order_14058.pdf"
+
+#     await cl.Message(
+#         content="Here is the original Executive Order referenced in this explanation:",
+#         elements=[
+#             cl.File(
+#                 name="Executive_Order_14058.pdf",
+#                 path=pdf_path,
+#                 display="inline"  # allows in-app preview
+#             )
+#         ]
+#     ).send()
